@@ -26,7 +26,7 @@ NODE monsterdle[295];
 int main()
 {
     readFile();
-    for(int i = 0; i < 297; i++){
+    for(int i = 0; i < 295; i++){
         printf("Name: %s\n", monsterdle[i].name);
         printf("CR: %d\n", monsterdle[i].challengeRating);
         printf("Type: %s\n", monsterdle[i].type);
@@ -35,7 +35,7 @@ int main()
         printf("HP: %d\n", monsterdle[i].hitPoints);
         printf("Alignment: %s\n", monsterdle[i].alignment);
     }
-    int monster = rand() % 297;
+    int monster = rand() % 295;
     printf("%d\n", monster);
     NODE answer = monsterdle[120];
     printf("Name: %s\n", answer.name);
@@ -53,15 +53,15 @@ int main()
         scanf("%s", guess.name);
         if(strcmp(guess.name, answer.name) == 0){
             printf("You Win!\n");
-            counter = 6;
+            counter = 7;
             break;
         }
         else{
             counter++;
-            for(int i = 0; i < 297; i++){
+            for(int i = 0; i < 295; i++){
                 if(strcmp(guess.name, monsterdle[i].name) == 0){
-                    int guessIndex = i;
-                    i = 297;
+                    guessIndex = i;
+                    //i = 295;
                 }
             }
             printf("Name: %s\n", monsterdle[guessIndex].name);
@@ -123,6 +123,9 @@ int main()
                 printf("Incorrect\n");
             }
         }
+    }
+    if(counter == 6){
+        printf("You Lose!\n");
     }
 }
 void readFile(){
