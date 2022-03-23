@@ -21,7 +21,7 @@ struct creature{
 //Function Prototypes
 void readFile(void);
 
-NODE monsterdle[297];
+NODE monsterdle[295];
 
 int main()
 {
@@ -35,8 +35,96 @@ int main()
         printf("HP: %d\n", monsterdle[i].hitPoints);
         printf("Alignment: %s\n", monsterdle[i].alignment);
     }
+    int monster = rand() % 297;
+    printf("%d\n", monster);
+    NODE answer = monsterdle[120];
+    printf("Name: %s\n", answer.name);
+    printf("CR: %d\n", answer.challengeRating);
+    printf("Type: %s\n", answer.type);
+    printf("Size: %s\n", answer.size);
+    printf("AC: %d\n", answer.armorClass);
+    printf("HP: %d\n", answer.hitPoints);
+    printf("Alignment: %s\n", answer.alignment);
+    int counter = 0;
+    NODE guess;
+    int guessIndex;
+    while(counter < 6){
+        printf("What is your guess?\n");
+        scanf("%s", guess.name);
+        if(strcmp(guess.name, answer.name) == 0){
+            printf("You Win!\n");
+            counter = 6;
+            break;
+        }
+        else{
+            counter++;
+            for(int i = 0; i < 297; i++){
+                if(strcmp(guess.name, monsterdle[i].name) == 0){
+                    int guessIndex = i;
+                    i = 297;
+                }
+            }
+            printf("Name: %s\n", monsterdle[guessIndex].name);
+            if(strcmp(monsterdle[guessIndex].name, answer.name) == 0){
+                printf("Correct\n");
+            }
+            else{
+                printf("Incorrect\n");
+            }
+            printf("CR: %d\n", monsterdle[guessIndex].challengeRating);
+            if(monsterdle[guessIndex].challengeRating == answer.challengeRating){
+                printf("Correct\n");
+            }
+            else if(monsterdle[guessIndex].challengeRating >= answer.challengeRating){
+                printf("Lower\n");
+            }
+            else{
+                printf("Higher\n");
+            }
+            printf("Type: %s\n", monsterdle[guessIndex].type);
+            if(strcmp(monsterdle[guessIndex].type, answer.type) == 0){
+                printf("Correct\n");
+            }
+            else{
+                printf("Incorrect\n");
+            }
+            printf("Size: %s\n", monsterdle[guessIndex].size);
+            if(strcmp(monsterdle[guessIndex].size, answer.size) == 0){
+                printf("Correct\n");
+            }
+            else{
+                printf("Incorrect\n");
+            }
+            printf("AC: %d\n", monsterdle[guessIndex].armorClass);
+            if(monsterdle[guessIndex].armorClass == answer.armorClass){
+                printf("Correct\n");
+            }
+            else if(monsterdle[guessIndex].armorClass >= answer.armorClass){
+                printf("Lower\n");
+            }
+            else{
+                printf("Higher\n");
+            }
+            printf("HP: %d\n", monsterdle[guessIndex].hitPoints);
+            if(monsterdle[guessIndex].hitPoints == answer.hitPoints){
+                printf("Correct\n");
+            }
+            else if(monsterdle[guessIndex].hitPoints >= answer.hitPoints){
+                printf("Lower\n");
+            }
+            else{
+                printf("Higher\n");
+            }
+            printf("Alignment: %s\n", monsterdle[guessIndex].alignment);
+            if(strcmp(monsterdle[guessIndex].alignment, answer.alignment) == 0){
+                printf("Correct\n");
+            }
+            else{
+                printf("Incorrect\n");
+            }
+        }
+    }
 }
-
 void readFile(){
     int flag = 1;
     char tempName[50];
