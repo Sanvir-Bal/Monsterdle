@@ -1,3 +1,11 @@
+Ideal First Guess: Young Remorhaz
+CR: 5
+Type: Monstrosity
+Size: Large
+AC: 14
+HP: 93
+Alignment: Unaligned
+
 Challenge Rating
 Average CR is 6.5
 141 Monsters with CR < 5
