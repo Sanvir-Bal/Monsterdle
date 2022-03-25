@@ -1,0 +1,53 @@
+Challenge Rating
+Average CR is 6.5
+141 Monsters with CR < 5
+119 Monsters with CR > 5
+35 Monsters with CR = 5
+
+Type
+16 Aberration
+31 Beast
+7 Celestial
+11 Construct
+44 Dragon
+16 Elemental
+3 Fey
+33 Fiend
+13 Giant
+44 Humanoid
+46 Monstrosity
+3 Ooze
+5 Plant
+23 Undead
+
+Size
+7 Small
+2 Medium
+117 Large Monsters
+115 Huge Monsters
+39 Gargantuan Monsters
+
+AC
+Average AC is 15.25
+126 Monsters with AC > 15
+134 Monsters with AC < 15
+35 Monsters with AC = 15
+
+HP
+Average HP is 109.35
+146 Monsters with HP > 82
+146 Monsters with HP < 82
+3 Monsters with HP = 82
+
+Alignment
+There are 57 unaligned monsters
+There are 10 any alignment monsters
+There are 18 lawful good monsters
+There are 9 lawful neutral monsters
+There are 47 lawful evil monsters
+There are 14 chaotic good monsters
+There are 9 chaotic neutral monsters
+There are 66 chaotic evil monsters
+There are 4 neutral good monsters
+There are 23 neutral monsters
+There are 38 neutral evil monsters
