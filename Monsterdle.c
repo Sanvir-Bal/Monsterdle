@@ -184,6 +184,13 @@ void readFile(){
                 break;
             case 7:
                 strcpy(monsterdle[i].alignment, tempName);
+                int k = 0;
+                while(monsterdle[i].alignment[k] != '\0'){
+                    if(monsterdle[i].alignment[k] == '-'){
+                        monsterdle[i].alignment[k] = ' ';
+                    }
+                    k++;
+                }
                 break;
             default: break;
         }
