@@ -38,7 +38,7 @@ int main()
     int counter = 0;
     char guess[100];
     int j;
-    while(counter < 6){
+    while(counter < 10){
         printf("What is your guess?\n");
         gets(guess);
         int i = 0;
