@@ -38,7 +38,8 @@ int main()
     int counter = 0;
     char guess[100];
     int j;
-    while(counter < 10){
+    int guessNumber = 10;
+    while(counter < guessNumber){
         printf("What is your guess?\n");
         gets(guess);
         int i = 0;
@@ -56,7 +57,7 @@ int main()
         j = 0;
         if(strcmp(guess, answer.name) == 0){
             printf("You Win!\n");
-            counter = 7;
+            counter = guessNumber + 1;
             break;
         }
         else{
@@ -64,7 +65,7 @@ int main()
             checkGuess(guess);
         }
     }
-    if(counter == 6){
+    if(counter == guessNumber){
         printf("You Lose!\n");
         printf("The Answer Was: %s\n", answer.name);
         printf("CR: %d\n", answer.challengeRating);
