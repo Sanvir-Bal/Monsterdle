@@ -5,7 +5,7 @@
 #include <ctype.h>
 #include <pthread.h>
 #include <unistd.h>
-#include<time.h>
+#include <time.h>
 //Definitons
 #define NODE struct creature
 //Customer Creature
