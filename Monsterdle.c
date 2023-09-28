@@ -40,7 +40,7 @@ int main()
     int j;
     int guessNumber = 10;
     while(counter < guessNumber){
-        printf("What is your guess?\n");
+        printf("\nWhat is your guess?\n");
         gets(guess);
         int i = 0;
         while(i < 296){
@@ -85,7 +85,7 @@ void checkGuess(char *guess){
             i = 295;
         }
     }
-    printf("Name: %s ", monsterdle[guessIndex].name);
+    printf("\nName: %s ", monsterdle[guessIndex].name);
     if(strcmp(monsterdle[guessIndex].name, answer.name) == 0){
         printf("Correct\n");
     }
